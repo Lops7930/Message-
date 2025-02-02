@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For My Love, Sharon Kagendo</title>
+    <style>
+        body {
+            text-align: center;
+            background-color: #ffe6f2;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #ff3366;
+            margin-top: 50px;
+        }
+
+        p {
+            font-size: 1.5em;
+            color: #cc0052;
+            padding: 20px;
+            max-width: 800px;
+            margin: auto;
+            line-height: 1.6;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .flower {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            opacity: 0.9;
+            animation: rise 6s linear infinite;
+        }
+
+        @keyframes rise {
+            from {
+                transform: translateY(100vh);
+                opacity: 0.9;
+            }
+            to {
+                transform: translateY(-10vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Good Morning, My Love, Sharon Kagendo! 💖🌞</h1>
+    <p>
+        Just thinking about you makes my heart skip a beat. You’re the sunshine that brightens my darkest days and the reason I wake up with a smile.  
+        I hope your morning is as beautiful and radiant as you are.  
+        Sending you all my love and positive vibes to start your day right.  
+        You mean the world to me, Kagendo, and I’m so grateful to have you in my life.  
+        Can’t wait to see your gorgeous smile again. Love you endlessly! 😘❤️
+    </p>
+
+    <script>
+        function createFlower() {
+            let flower = document.createElement("div");
+            flower.classList.add("flower");
+            document.body.appendChild(flower);
+
+            let colors = [
+                'https://www.pngall.com/wp-content/uploads/2016/05/Flower-PNG-HD.png',  
+                'https://upload.wikimedia.org/wikipedia/commons/3/3a/Rose_PNG_Clip_Art_Image.png',  
+                'https://pngimg.com/uploads/flower/flower_PNG5423.png'
+            ];
+
+            flower.style.backgroundImage = `url(${colors[Math.floor(Math.random() * colors.length)]})`;
+            flower.style.left = Math.random() * window.innerWidth + "px";
+            flower.style.width = Math.random() * 40 + 40 + "px";
+            flower.style.height = flower.style.width;
+
+            setTimeout(() => {
+                flower.remove();
+            }, 6000);
+        }
+
+        setInterval(createFlower, 400);
+    </script>
+</body>
+</html>
